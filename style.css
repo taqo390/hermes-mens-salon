@@ -464,7 +464,7 @@ input:focus, select:focus, textarea:focus{
   letter-spacing: .02em;
 }
 .floating-wa:hover{filter: brightness(.96)}
-.floating-wa span{font-size:14px}
+.floating-wa span{font-size:12px}
 
 .lightbox{
   position: fixed; inset:0;
