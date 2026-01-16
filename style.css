@@ -1,3 +1,8 @@
+/* ===== Responsive base (mos e prek) ===== */
+* { box-sizing: border-box; }
+html, body { width: 100%; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+
 /* Hermes Men's Salon - single page */
 :root{
   --bg: #fbf7f2;
@@ -810,4 +815,57 @@ input:focus, select:focus, textarea:focus{
 .floating-wa svg, .floating-ig svg{
   width:18px; height:18px;
   fill: currentColor;
+}
+/* ===== Mobile (telefon) ===== */
+@media (max-width: 768px){
+
+  /* 1) Header / menu të mos dalë jashtë */
+  header { padding: 10px 14px; }
+
+  nav, .nav, .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a, .nav a, .navbar a {
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 999px;
+  }
+
+  /* 2) Titujt dhe tekstet */
+  h1 { font-size: 28px; line-height: 1.15; }
+  h2 { font-size: 22px; line-height: 1.2; }
+  p  { font-size: 15px; line-height: 1.5; }
+
+  /* 3) Seksionet të kenë hapësirë */
+  section { padding-left: 14px; padding-right: 14px; }
+
+  /* 4) Çdo layout me kolona -> 1 kolonë */
+  .grid, .cards, .services, .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* 5) Form / Rezervimi */
+  input, select, textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  button, .btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  /* 6) Butonat floating (IG/WA) mos të zënë shumë */
+  .floating-buttons, .float-buttons, .social-float {
+    right: 12px;
+    bottom: 12px;
+    transform: scale(0.92);
+    transform-origin: right bottom;
+  }
 }
